@@ -1,0 +1,25 @@
+.promo-container {
+  background-color: #C0B9DD;
+  color: #f7f4ea;
+  padding: 1rem;
+  text-align: center;
+  min-width: 20%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.promo-container h3 {
+  font-size: 1.5rem;
+}
+.promo-container p {
+  font-size: 1rem;
+}
+.promo-container a {
+  font-size: .7rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+ hr {
+  border: 1px solid #f7f4ea;
+  margin: 1rem 0 1rem 0;
+}
