@@ -1,9 +1,33 @@
-import bannerImg from '../images/teatrayassort.jpeg';
+import ItemCard from './ItemCard.js';
 import PromoSmall from './PromoSmall.js';
 import '../style/Home.css'
 import peachTea from '../images/peachtealisting.webp';
 import teaBox from '../images/tea box.webp';
-import RoseTea from '../images/rose tea.webp';
+import roseTea from '../images/rose tea.webp';
+import cinnamon from '../images/cinnamon tea.jpeg';
+
+const fakeListings = [
+  {
+    image: `${peachTea}`,
+    title: 'Peach Passsion',
+    description: 'Aliquam in neque sem. Pellentesque quis porttitor dui, vel venenatis quam. Nam id sodales augue. Donec vel elit eros.'
+  },
+  {
+    image: `${teaBox}`,
+    title: 'Matcha',
+    description: 'Aliquam in neque sem. Pellentesque quis porttitor dui, vel venenatis quam. Nam id sodales augue. Donec vel elit eros.'
+  },
+  {
+    image: `${roseTea}`,
+    title: 'oolong',
+    description: 'Aliquam in neque sem. Pellentesque quis porttitor dui, vel venenatis quam. Nam id sodales augue. Donec vel elit eros.'
+  },
+  {
+    image: `${cinnamon}`,
+    title: 'Cinnamon',
+    description: 'Aliquam in neque sem. Pellentesque quis porttitor dui, vel venenatis quam. Nam id sodales augue. Donec vel elit eros.'
+  }
+]
 
 function Home() {
   return (
@@ -40,17 +64,11 @@ function Home() {
         </div>
       </div>
       <div className="shop-preview">
-          <h2>DISCOVER THE COMPANY OF TEA</h2>
-          <img src={peachTea} />
-          <img src={RoseTea} />
-          <img src={teaBox}/>
-          <img src={peachTea} />
-          <img src={RoseTea} />
-          <img src={teaBox}/>
+        <h2>DISCOVER THE COMPANY OF TEA</h2>
+        <div className="preview-cards">
+          {fakeListings.map((item) => <ItemCard image={item.image} title={item.title} description={item.description}/>)}
+        </div>
       </div>
-
-
-      <p>This component will eventually hold information like who we are, what this is, and photos of the tea. we can also add an interactive map to see where the teas come from</p>
 
     </div>
   )
